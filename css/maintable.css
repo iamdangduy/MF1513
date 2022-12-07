@@ -1,0 +1,5 @@
+.main__table {
+  height: calc(765px - 56px - 60px);
+  width: 100%;
+  overflow: auto;
+}

@@ -1,0 +1,142 @@
+.sidebar {
+  background-color: aqua;
+  height: 100vh;
+}
+
+.sidebar__logo {
+  height: 56px;
+  background-color: aliceblue;
+  width: 100%;
+}
+
+.sidebar__tools {
+  background-color: #00201b;
+  height: calc(100% - 56px);
+  width: 100%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+}
+
+.tools-item {
+  width: 100%;
+  height: 100%;
+}
+
+.item {
+  background-color: #00201b;
+  width: 100%;
+  height: 44px;
+  margin-top: 4px;
+  padding: 10px 13px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.item:hover {
+  background-color: #01836f;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.item__logo {
+  width: 24px;
+  height: 100%;
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -33px -1587px;
+  width: 18px;
+  height: 20px;
+}
+
+.item__text {
+  width: calc(100% - 24px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  box-sizing: border-box;
+  color: #e6f6f3;
+}
+
+.item2 {
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -78px -1631px;
+  width: 14px;
+  height: 18px;
+}
+
+.item3 {
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -121px -1590px;
+  width: 16px;
+  height: 16px;
+}
+
+.item4 {
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -165px -1589px;
+  width: 16px;
+  height: 18px;
+}
+
+.item5 {
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -206px -1588px;
+  width: 20px;
+  height: 18px;
+}
+
+.item6 {
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -254px -1589px;
+  width: 14px;
+  height: 17px;
+}
+
+.item7 {
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -294px -1589px;
+  width: 18px;
+  height: 17px;
+}
+
+.item8 {
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -339px -1590px;
+  width: 18px;
+  height: 17px;
+}
+
+.item9 {
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -382px -1589px;
+  width: 17px;
+  height: 18px;
+}
+
+.item10 {
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -427px -1591px;
+  width: 16px;
+  height: 16px;
+}
+
+.item11 {
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -471px -1590px;
+  width: 17px;
+  height: 17px;
+}
+
+.item12 {
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -514px -1590px;
+  width: 15px;
+  height: 16px;
+}
+
+.item13 {
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -552px -1593px;
+  width: 14px;
+  height: 13px;
+}
+
+.item14 {
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -592px -1588px;
+  width: 23px;
+  height: 18px;
+}
+
+.item15 {
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -636px -1588px;
+  width: 19px;
+  height: 18px;
+}

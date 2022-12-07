@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="sidebar__logo"></div>
+        <div class="sidebar__tools">
+          <div class="tools-item">
+            <div class="item">
+              <div class="item__logo"></div>
+              <div class="item__text">Tổng quan</div>
+            </div>
+            <div class="item">
+              <div class="item__logo item2"></div>
+              <div class="item__text">Tiền mặt</div>
+            </div>
+            <div class="item">
+              <div class="item__logo item3"></div>
+              <div class="item__text">Tiền gửi</div>
+            </div>
+            <div class="item">
+              <div class="item__logo item4"></div>
+              <div class="item__text">Mua hàng</div>
+            </div>
+            <div class="item">
+              <div class="item__logo item5"></div>
+              <div class="item__text">Bán hàng</div>
+            </div>
+            <div class="item">
+              <div class="item__logo item6"></div>
+              <div class="item__text">Quản lí hoá đơn</div>
+            </div>
+            <div class="item">
+              <div class="item__logo item7"></div>
+              <div class="item__text">Kho</div>
+            </div>
+            <div class="item">
+              <div class="item__logo item8"></div>
+              <div class="item__text">Công cụ dụng cụ</div>
+            </div>
+            <div class="item">
+              <div class="item__logo item9"></div>
+              <div class="item__text">Tài sản cố định</div>
+            </div>
+            <div class="item">
+              <div class="item__logo item10"></div>
+              <div class="item__text">Thuế</div>
+            </div>
+            <div class="item">
+              <div class="item__logo item11"></div>
+              <div class="item__text">Giá thành</div>
+            </div>
+            <div class="item">
+              <div class="item__logo item12"></div>
+              <div class="item__text">Tổng hợp</div>
+            </div>
+            <div class="item">
+              <div class="item__logo item13"></div>
+              <div class="item__text">Ngân sách</div>
+            </div>
+            <div class="item">
+              <div class="item__logo item14"></div>
+              <div class="item__text">Báo cáo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="header">
+          <div class="header__left">
+            <div class="header__toggle"></div>
+            <div class="header__info">
+              CÔNG TY TNHH SẢN XUẤT - THƯƠNG MẠI DỊCH VỤ QUI PHÚC
+            </div>
+            <div class="header__dropdown"></div>
+          </div>
+          <div class="header__right">
+            <div class="header__noti"></div>
+            <div class="header__avatar"></div>
+            <div class="header__user">Nguyễn Văn Mạnh</div>
+            <div class="header__dropdown"></div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="content__main">
+            <div class="content__main--bookmark">
+              <div
+                class="bookmark__text"
+                style="font-size: 22px; font-weight: 700; line-height: 26px"
+              >
+                Nhân viên
+              </div>
+              <button class="bookmark__btn">Thêm mới nhân viên</button>
+            </div>
+            <div class="content__main--table">
+              <div class="main__search">
+                <div class="main__refresh"></div>
+                <div class="main__input">
+                  <input
+                    class="input input-search"
+                    type="text"
+                    placeholder="Tìm theo mã, tên nhân viên"
+                  />
+                </div>
+              </div>
+              <div class="main__table">
+                <table class="trEmployee">
+                  <tr>
+                    <th>
+                      <input type="checkbox" />
+                    </th>
+                    <th style="width: 100px">MÃ NHÂN VIÊN</th>
+                    <th style="width: 200px">TÊN NHÂN VIÊN</th>
+                    <th>GIỚI TÍNH</th>
+                    <th class="dob">NGÀY SINH</th>
+                    <th>SỐ CMND</th>
+                    <th>CHỨC DANH</th>
+                    <th>TÊN ĐƠN VỊ</th>
+                    <th>SỐ TÀI KHOẢN</th>
+                    <th>TÊN NGÂN HÀNG</th>
+                    <th>CHI NHÁNH TK NGÂN HÀNG</th>
+                    <th>CHỨC NĂNG</th>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>00012</td>
+                    <td>Nguyễn Văn Liệt</td>
+                    <td>Nam</td>
+                    <td class="dob">31/12/1969</td>
+                    <td>001201005936</td>
+                    <td>Trưởng nhóm</td>
+                    <td>Xay keo, phối trộn</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="main__pagination">
+                <div class="pagination__left">
+                  Tổng số: <b style="font-weight: bold">1035</b> bản ghi
+                </div>
+                <div class="pagination__right">
+                  <div class="pagination__dropdown">
+                    <select
+                      class="dropdown"
+                      name="cars"
+                      id="cars"
+                      style="
+                        height: 36px;
+                        padding-left: 12px;
+                        padding-right: 12px;
+                      "
+                    >
+                      <option value="volvo">20 bản ghi trên một trang</option>
+                      <option value="saab">Saab</option>
+                      <option value="mercedes">Mercedes</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                  <div class="pagination__page">
+                    <div class="page__item">Trước</div>
+                    <div class="page__item">1</div>
+                    <div class="page__item">2</div>
+                    <div class="page__item">3</div>
+                    <div class="page__item">...</div>
+                    <div class="page__item">52</div>
+                    <div class="page__item">Sau</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dialog">
+      <div class="add-form">
+        <div class="dialog__header">
+          <p class="dialog__title">Thông tin nhân viên</p>
+          <div class="dialog__icon">
+            <div class="dialog__icon--request"></div>
+            <div class="dialog__icon--close"></div>
+          </div>
+        </div>
+        <div class="dialog__content">
+          <div class="dialog__row">
+            <div class="dialog__row--item">
+              <div class="row__left">
+                <div class="row__input input1">
+                  <div class="row__input--label">Mã</div>
+                  <div class="row__input--input">
+                    <input type="text" placeholder="NV-1644">
+                  </div>
+                </div>
+                <div class="row__input input2">
+                  <div class="row__input--label">Tên</div>
+                  <div class="row__input--input">
+                    <input type="text" placeholder="Nguyễn Thị Ánh Bằng">
+                  </div>
+                </div>
+              </div>
+              <div class="row__right">
+              
+              </div>
+            </div>
+          </div>
+          <div class="dialog__row">
+            <div class="dialog__row--item">
+              <div class="row__left"></div>
+              <div class="row__right"></div>
+            </div>
+          </div>
+          <div class="dialog__row">
+            <div class="dialog__row--item">
+              <div class="row__left"></div>
+              <div class="row__right"></div>
+            </div>
+          </div>
+          <div class="dialog__row">
+            <div class="dialog__row--item">
+              <div class="row__left"></div>
+              <div class="row__right"></div>
+            </div>
+          </div>
+          <div class="dialog__row">
+            <div class="dialog__row--item">
+              <div class="row__left"></div>
+              <div class="row__right"></div>
+            </div>
+          </div>
+          <div class="dialog__row">
+            <div class="dialog__row--item">
+              <div class="row__left"></div>
+              <div class="row__right"></div>
+            </div>
+          </div>
+        </div>
+        <hr class="dialog__hr" />
+        <div class="dialog__footer">
+          <div class="dialog__footer-left">
+            <button class="btn-cancel">Huỷ</button>
+          </div>
+          <div class="dialog__footer-right">
+            <button class="btn-hide">Cất</button>
+            <button class="btn-hide-and-add">Cất và Thêm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/js.js"></script>
+  </body>
+</html>

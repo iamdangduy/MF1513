@@ -1,0 +1,59 @@
+.header {
+  background-color: #E6F6F3;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+}
+
+.header__toggle {
+    width: 24px;
+    height: 24px;
+    background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -847px -35px;
+	width: 16px;
+	height: 14px;
+    margin-left: 6px;
+}
+
+.header__info {
+    margin-left: 16px;
+}
+
+.header__dropdown {
+    background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -1129px -365px;
+	width: 14px;
+	height: 8px;
+    margin-left: 12px;
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+}
+
+.header__right:hover {
+    cursor: pointer;
+}
+
+.header__avatar {
+    background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -352px -894px;
+	width: 32px;
+	height: 32px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.header__noti {
+    background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -788px -30px;
+	width: 22px;
+	height: 25px;
+    margin-right: 24px;
+}
+
+

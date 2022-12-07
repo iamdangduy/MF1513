@@ -1,0 +1,33 @@
+@import url(../css/sidebar.css);
+@import url(../css/header.css);
+@import url(../css/content.css);
+@import url(../css/button.css);
+@import url(../css/table.css);
+@import url(../css/maintable.css);
+@import url(../css/formadd.css);
+@import url(../css/input.css);
+
+body {
+  margin: 0;
+}
+
+* {
+  /* font-size: 14px; */
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 200px auto;
+}
+
+
+.main {
+  display: grid;
+  grid-template-rows: 56px auto;
+}
+
+
+
+

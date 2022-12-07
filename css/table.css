@@ -1,0 +1,25 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black;
+}
+
+th,
+td {
+  text-align: start;
+  padding: 8px;
+  border: 1px solid black;
+  font-size: 14px;
+  background-color: rgb(230, 246, 243);
+}
+
+th {
+  background-color: #016253;
+  position: sticky;
+  top: 0;
+  color: #e6f6f3;
+}
+
+.dob {
+  text-align: center;
+}

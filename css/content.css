@@ -1,0 +1,91 @@
+.content {
+  background-color: #99dad0;
+  padding: 16px 24px 48px 24px;
+  box-sizing: border-box;
+}
+
+.content__main {
+  /* background-color: azure; */
+  width: 100%;
+  height: 100%;
+}
+
+.content__main--bookmark {
+  background-color: #99dad0;
+  width: 100%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content__main--table {
+  width: 100%;
+  height: calc(100% - 36px - 16px);
+  margin-top: 16px;
+}
+
+
+
+
+.main__search {
+  background-color: #E6F6F3;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  flex-direction: row-reverse;
+}
+
+.main__refresh {
+  width: 36px;
+  height: 36px;
+  background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -1024px -29px;
+	width: 22px;
+	height: 24px;
+  cursor: pointer;
+}
+
+.main__input {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-search {
+  width: 240px;
+}
+
+.main__pagination {
+  background-color: #E6F6F3;
+  height: 56px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.pagination__right {
+  display: flex;
+  align-items: center;
+}
+
+.pagination__page {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.page__item {
+  margin-right: 12px;
+}
+
+.pagination__dropdown {
+  margin-right: 12px;
+}
+
