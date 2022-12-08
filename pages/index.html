@@ -114,8 +114,8 @@
               <div class="main__table">
                 <table class="trEmployee">
                   <tr>
-                    <th>
-                      <input type="checkbox" />
+                    <th class="td-input">
+                      <input type="checkbox" class="checkbox-input" />
                     </th>
                     <th style="width: 100px">MÃ NHÂN VIÊN</th>
                     <th style="width: 200px">TÊN NHÂN VIÊN</th>
@@ -130,7 +130,9 @@
                     <th>CHỨC NĂNG</th>
                   </tr>
                   <tr>
-                    <td><input type="checkbox" /></td>
+                    <td class="td-input">
+                      <input type="checkbox" class="checkbox-input" />
+                    </td>
                     <td>00012</td>
                     <td>Nguyễn Văn Liệt</td>
                     <td>Nam</td>
@@ -199,49 +201,137 @@
                 <div class="row__input input1">
                   <div class="row__input--label">Mã</div>
                   <div class="row__input--input">
-                    <input type="text" placeholder="NV-1644">
+                    <input type="text" placeholder="NV-1644" />
                   </div>
                 </div>
                 <div class="row__input input2">
                   <div class="row__input--label">Tên</div>
                   <div class="row__input--input">
-                    <input type="text" placeholder="Nguyễn Thị Ánh Bằng">
+                    <input type="text" placeholder="Nguyễn Thị Ánh Bằng" />
                   </div>
                 </div>
               </div>
               <div class="row__right">
-              
+                <div class="row__input input1">
+                  <div class="row__input--label">Ngày sinh</div>
+                  <div class="row__input--input">
+                    <input type="text" placeholder="NV-1644" />
+                  </div>
+                </div>
+                <div class="row__input input2">
+                  <div class="row__input--label">Giới tính</div>
+                  <div class="row__input--radio">
+                    <div class="input__radio--row">
+                      <input type="radio" class="radio-input" />
+                      <div class="radio__label">Nam</div>
+                    </div>
+                    <div class="input__radio--row">
+                      <input type="radio" class="radio-input" />
+                      <div class="radio__label">Nữ</div>
+                    </div>
+                    <div class="input__radio--row">
+                      <input type="radio" class="radio-input" />
+                      <div class="radio__label">Khác</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="dialog__row">
             <div class="dialog__row--item">
-              <div class="row__left"></div>
-              <div class="row__right"></div>
+              <div class="row__left">
+                <div class="row__input">
+                  <div class="row__input--label">Đơn vị</div>
+                  <div class="row__input--input">
+                    <input type="text" placeholder="Phòng nhân sự" />
+                  </div>
+                </div>
+              </div>
+              <div class="row__right">
+                <div class="row__input input-id">
+                  <div class="row__input--label">Số CMND</div>
+                  <div class="row__input--input">
+                    <input type="text" placeholder="001201005936" />
+                  </div>
+                </div>
+                <div class="row__input input-date">
+                  <div class="row__input--label">Ngày cấp</div>
+                  <div class="row__input--input">
+                    <input type="text" placeholder="Nguyễn Thị Ánh Bằng" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="dialog__row">
             <div class="dialog__row--item">
-              <div class="row__left"></div>
-              <div class="row__right"></div>
+              <div class="row__left">
+                <div class="row__input">
+                  <div class="row__input--label">Nơi cấp</div>
+                  <div class="row__input--input">
+                    <input type="text" placeholder="Hải Phòng" />
+                  </div>
+                </div>
+              </div>
+              <div class="row__right">
+                <div class="row__input">
+                  <div class="row__input--label">Chức danh</div>
+                  <div class="row__input--input">
+                    <input type="text" placeholder="Lễ tân chính" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="dialog__row">
-            <div class="dialog__row--item">
-              <div class="row__left"></div>
-              <div class="row__right"></div>
+            <div class="row__input--label">Địa chỉ</div>
+            <div class="row__input--input">
+              <input type="text" placeholder="146 Phạm Văn Chiêu" />
             </div>
           </div>
           <div class="dialog__row">
-            <div class="dialog__row--item">
-              <div class="row__left"></div>
-              <div class="row__right"></div>
+            <div class="dialog__row--grid">
+              <div class="dialog__row--col">
+                <div class="row__input--label">ĐT di động</div>
+                <div class="row__input--input">
+                  <input type="text" placeholder="0333133942" />
+                </div>
+              </div>
+              <div class="dialog__row--col">
+                <div class="row__input--label">ĐT cố định</div>
+                <div class="row__input--input">
+                  <input type="text" placeholder="(764) 749-6478" />
+                </div>
+              </div>
+              <div class="dialog__row--col">
+                <div class="row__input--label">Email</div>
+                <div class="row__input--input">
+                  <input type="text" placeholder="nguyendangduy@gmail.com" />
+                </div>
+              </div>
             </div>
           </div>
           <div class="dialog__row">
-            <div class="dialog__row--item">
-              <div class="row__left"></div>
-              <div class="row__right"></div>
+            <div class="dialog__row--grid">
+              <div class="dialog__row--col">
+                <div class="row__input--label">Tài khoản ngân hàng</div>
+                <div class="row__input--input">
+                  <input type="text" placeholder="944147" />
+                </div>
+              </div>
+              <div class="dialog__row--col">
+                <div class="row__input--label">Tên ngân hàng</div>
+                <div class="row__input--input">
+                  <input type="text" placeholder="Ngân hàng techombank" />
+                </div>
+              </div>
+              <div class="dialog__row--col">
+                <div class="row__input--label">Chi nhánh</div>
+                <div class="row__input--input">
+                  <input type="text" placeholder="Chi nhánh 6" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

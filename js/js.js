@@ -13,7 +13,7 @@ function loadData() {
       for (const employee of res) {
         console.log(employee.CreatedDate.slice(0, -9));
         var trHTML = `<tr>
-                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox" class="checkbox-input"></td>
                         <td>${employee.EmployeeCode}</td>
                         <td>${employee.EmployeeName}</td>
                         <td>${employee.Gender || ""}</td>

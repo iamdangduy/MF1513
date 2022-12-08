@@ -4,4 +4,5 @@ input {
     box-sizing: border-box;
     border: 1px solid #016253;
     border-radius: 4px;
+    width: 100%;
 }

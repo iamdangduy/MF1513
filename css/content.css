@@ -25,11 +25,8 @@
   margin-top: 16px;
 }
 
-
-
-
 .main__search {
-  background-color: #E6F6F3;
+  background-color: #ffffff;
   height: 60px;
   width: 100%;
   display: flex;
@@ -42,9 +39,9 @@
 .main__refresh {
   width: 36px;
   height: 36px;
-  background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -1024px -29px;
-	width: 22px;
-	height: 24px;
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -1024px -29px;
+  width: 22px;
+  height: 24px;
   cursor: pointer;
 }
 
@@ -60,7 +57,7 @@
 }
 
 .main__pagination {
-  background-color: #E6F6F3;
+  background-color: #ffffff;
   height: 56px;
   width: 100%;
   display: flex;
@@ -88,4 +85,3 @@
 .pagination__dropdown {
   margin-right: 12px;
 }
-

@@ -7,17 +7,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  display: none;
+  display: flex;
 }
 
 .add-form {
   width: 870px;
   height: 620px;
-  background-color: #E6F6F3;
+  background-color: #ffffff;
   position: fixed;
   border-radius: 4px;
   padding: 24px 32px;
   box-sizing: border-box;
+}
+
+.dialog__row {
+  margin-bottom: 8px;
 }
 
 .dialog__title {
@@ -39,22 +43,21 @@
 
 .dialog__content {
   width: 100%;
-  background-color: rgb(255, 255, 255);
   height: calc(100% - 36px - 8px - 24px - 24px - 24px);
   margin-top: 24px;
 }
 
 .dialog__icon--close {
-  background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -147px -147px;
-	width: 18px;
-	height: 18px;
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -147px -147px;
+  width: 18px;
+  height: 18px;
   cursor: pointer;
 }
 
 .dialog__icon--request {
-  background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -89px -145px;
-	width: 22px;
-	height: 22px;
+  background: url("../assets/img/Sprites.64af8f61.svg") no-repeat -89px -145px;
+  width: 22px;
+  height: 22px;
   margin-right: 8px;
   cursor: pointer;
 }
@@ -79,35 +82,86 @@
 }
 
 .row__left {
-  width: 50%;
-  background-color: aqua;
+  width: 48%;
+  /* background-color: #e6f6f3; */
   height: calc(36px + 8px + 19px);
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   align-items: center;
 }
 
-.input1 {
-  flex-grow: 1;
-}
-
-.input2 {
-  flex-grow: 3;
+.row__right {
+  width: 50%;
+  /* background-color: #e6f6f3; */
+  height: calc(36px + 8px + 19px);
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
 }
 
 .row__input {
   margin-right: 8px;
+  width: 100%;
 }
 
-.row__right {
-  width: 50%;
-  background-color: bisque;
-  height: calc(36px + 8px + 19px);
-  border: 1px solid black;
+.input1 {
+  flex-basis: 30%;
+}
+
+.input2 {
+  flex-basis: 70%;
+  height: 100%;
 }
 
 .row__input--label {
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 8px;
+}
+
+.radio-input {
+  width: 20px;
+  height: 20px;
+  margin: 0px 8px 0px 0px;
+}
+
+.row__input--radio {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.radio__label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.input__radio--row {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.input-id {
+  flex-basis: 60%;
+}
+
+.input-date {
+  flex-basis: 40%;
+}
+
+.dialog__row--grid {
+  display: flex;
+}
+
+.dialog__row--col {
+  margin-right: 8px;
+  width: 25%;
+}
+
+.btn-hide, .btn-cancel {
+  background-color: #ffffff;
+  color: #00201B;
+  border: 1px solid #00201B;
 }
