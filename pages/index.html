@@ -135,7 +135,7 @@
                     <th>CHI NHÁNH TK NGÂN HÀNG</th>
                     <th>CHỨC NĂNG</th>
                   </tr>
-                  <div class="tr-user" style="background-color: aqua;">
+                  <div class="tr-user" style="background-color: aqua">
                     <tr>
                       <td class="td-input">
                         <input type="checkbox" class="checkbox-input" />
@@ -215,7 +215,11 @@
                 <div class="row__input input2">
                   <div class="row__input--label">Tên <span>*</span></div>
                   <div class="row__input--input">
-                    <input type="text" placeholder="Nguyễn Thị Ánh Bằng" />
+                    <input
+                      type="text"
+                      id="label-name-employee"
+                      placeholder="Nguyễn Thị Ánh Bằng"
+                    />
                   </div>
                 </div>
               </div>
@@ -364,11 +368,26 @@
           </div>
           <div class="dialog__footer-right">
             <button class="btn-hide" onclick="closeDialog()">Cất</button>
-            <button class="btn-hide-and-add">Cất và Thêm</button>
+            <button class="btn-hide-and-add" onclick="validateDialog()">
+              Cất và Thêm
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="popup">
+        <div class="popup__main">
+          <div class="popup__main--title">
+            <h1 style="font-size: 24px; font-weight: 700">Thông báo</h1>
+            <div class="main__title--close" onclick="closePopup()"></div>
+          </div>
+          <div class="popup__main--content"></div>
+          <div class="popup__main--footer">
+            <button onclick="closePopup()">Đồng ý</button>
           </div>
         </div>
       </div>
     </div>
+
     <script src="../js/js.js"></script>
   </body>
 </html>

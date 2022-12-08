@@ -69,7 +69,62 @@ function closeDialog() {
   try {
     //Ẩn dialog
     let isDisplay = document.querySelector(".dialog");
+    console.log(isDisplay);
     isDisplay.style.display = "none";
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+/**
+ * Hàm validate dữ liệu
+ * Author: Duy
+ */
+function validateDialog() {
+  try {
+    let msgError = [];
+    // get element
+    let idEmployee = document.querySelector("#input-id").value;
+    let nameEmployee = document.querySelector("#label-name-employee").value;
+
+    //kiểm tra dữ liệu người dùng nhập
+    if (idEmployee === "" || idEmployee === undefined || idEmployee === null) {
+      msgError.push("ID không được phép để trống");
+    }
+    if (
+      nameEmployee === "" ||
+      nameEmployee === undefined ||
+      nameEmployee === null
+    ) {
+      msgError.push("Name không được phép để trống");
+    }
+    console.log(msgError);
+    // let notification = document.querySelector(".popup__main--content");
+    //in dữ liệu ra popup
+    if (msgError.length !== 0) {
+      document.querySelector(".popup").style.display = "flex";
+      for (const noti of msgError) {
+        let liNoti = `<li class="popup-noti">${noti}</li>`;
+        $(".popup__main--content").append(liNoti);
+      }
+    }
+    msgError = [];
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+/**
+ * Hàm đóng Popup
+ * Author: Duy
+ */
+function closePopup() {
+  try {
+    //ẩn popup
+    document.querySelector(".popup").style.display = "none";
+
+    //xoá hết noti trong popup
+    $(".popup-noti").remove();
   } catch (error) {
     console.log(error);
   }
