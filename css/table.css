@@ -20,6 +20,14 @@ th {
   color: #ffffff;
 }
 
+.tr-user {
+  width: 100%;
+  background-color: #016253;
+}
+
+.tr-user:hover {
+  background-color: #016253;
+}
 .dob {
   text-align: center;
 }

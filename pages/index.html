@@ -98,7 +98,13 @@
               >
                 Nhân viên
               </div>
-              <button class="bookmark__btn">Thêm mới nhân viên</button>
+              <button
+                id="btn-adduser"
+                class="bookmark__btn"
+                onclick="displayDialog()"
+              >
+                Thêm mới nhân viên
+              </button>
             </div>
             <div class="content__main--table">
               <div class="main__search">
@@ -129,22 +135,24 @@
                     <th>CHI NHÁNH TK NGÂN HÀNG</th>
                     <th>CHỨC NĂNG</th>
                   </tr>
-                  <tr>
-                    <td class="td-input">
-                      <input type="checkbox" class="checkbox-input" />
-                    </td>
-                    <td>00012</td>
-                    <td>Nguyễn Văn Liệt</td>
-                    <td>Nam</td>
-                    <td class="dob">31/12/1969</td>
-                    <td>001201005936</td>
-                    <td>Trưởng nhóm</td>
-                    <td>Xay keo, phối trộn</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
+                  <div class="tr-user" style="background-color: aqua;">
+                    <tr>
+                      <td class="td-input">
+                        <input type="checkbox" class="checkbox-input" />
+                      </td>
+                      <td>00012</td>
+                      <td>Nguyễn Văn Liệt</td>
+                      <td>Nam</td>
+                      <td class="dob">31/12/1969</td>
+                      <td>001201005936</td>
+                      <td>Trưởng nhóm</td>
+                      <td>Xay keo, phối trộn</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </div>
                 </table>
               </div>
               <div class="main__pagination">
@@ -191,7 +199,7 @@
           <p class="dialog__title">Thông tin nhân viên</p>
           <div class="dialog__icon">
             <div class="dialog__icon--request"></div>
-            <div class="dialog__icon--close"></div>
+            <div class="dialog__icon--close" onclick="closeDialog()"></div>
           </div>
         </div>
         <div class="dialog__content">
@@ -199,13 +207,13 @@
             <div class="dialog__row--item">
               <div class="row__left">
                 <div class="row__input input1">
-                  <div class="row__input--label">Mã</div>
+                  <div class="row__input--label">Mã <span>*</span></div>
                   <div class="row__input--input">
-                    <input type="text" placeholder="NV-1644" />
+                    <input id="input-id" type="text" placeholder="NV-1644" />
                   </div>
                 </div>
                 <div class="row__input input2">
-                  <div class="row__input--label">Tên</div>
+                  <div class="row__input--label">Tên <span>*</span></div>
                   <div class="row__input--input">
                     <input type="text" placeholder="Nguyễn Thị Ánh Bằng" />
                   </div>
@@ -215,7 +223,7 @@
                 <div class="row__input input1">
                   <div class="row__input--label">Ngày sinh</div>
                   <div class="row__input--input">
-                    <input type="text" placeholder="NV-1644" />
+                    <input type="date" placeholder="NV-1644" />
                   </div>
                 </div>
                 <div class="row__input input2">
@@ -242,10 +250,24 @@
             <div class="dialog__row--item">
               <div class="row__left">
                 <div class="row__input">
-                  <div class="row__input--label">Đơn vị</div>
-                  <div class="row__input--input">
-                    <input type="text" placeholder="Phòng nhân sự" />
-                  </div>
+                  <div class="row__input--label">Đơn vị <span>*</span></div>
+                  <select
+                    class="dropdown"
+                    name="cars"
+                    id="cars"
+                    style="
+                      height: 36px;
+                      padding-left: 8px;
+                      padding-right: 8px;
+                      width: 100%;
+                      border-radius: 4px;
+                    "
+                  >
+                    <option value="volvo">20 bản ghi trên một trang</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
                 </div>
               </div>
               <div class="row__right">
@@ -258,7 +280,7 @@
                 <div class="row__input input-date">
                   <div class="row__input--label">Ngày cấp</div>
                   <div class="row__input--input">
-                    <input type="text" placeholder="Nguyễn Thị Ánh Bằng" />
+                    <input type="date" placeholder="Nguyễn Thị Ánh Bằng" />
                   </div>
                 </div>
               </div>
@@ -338,10 +360,10 @@
         <hr class="dialog__hr" />
         <div class="dialog__footer">
           <div class="dialog__footer-left">
-            <button class="btn-cancel">Huỷ</button>
+            <button class="btn-cancel" onclick="closeDialog()">Huỷ</button>
           </div>
           <div class="dialog__footer-right">
-            <button class="btn-hide">Cất</button>
+            <button class="btn-hide" onclick="closeDialog()">Cất</button>
             <button class="btn-hide-and-add">Cất và Thêm</button>
           </div>
         </div>
