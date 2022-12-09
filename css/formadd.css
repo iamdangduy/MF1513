@@ -160,12 +160,38 @@
   width: 25%;
 }
 
-.btn-hide, .btn-cancel {
+.btn-hide,
+.btn-cancel {
   background-color: #ffffff;
-  color: #00201B;
-  border: 1px solid #00201B;
+  color: #00201b;
+  border: 1px solid #00201b;
 }
 
 span {
   color: red;
+}
+
+.confirm__role {
+  display: flex;
+  align-items: center;
+  /* background-color: #00201B; */
+  width: 70%;
+  justify-content: flex-start;
+}
+
+#input-checkbox {
+  width: 24px;
+  height: 24px;
+}
+
+.role__employee,
+.role__customer {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.role__label {
+  font-size: 14px;
+  font-weight: 400;
 }

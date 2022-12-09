@@ -1,11 +1,37 @@
-//Get data
-loadData();
+moveProgress();
+
+/**
+ * Hàm chuyển động progressbar
+ * Author: Duy
+ */
+function moveProgress() {
+  try {
+    let elem = document.querySelector(".progress");
+    let progressBar = document.querySelector(".main__progress");
+    progressBar.style.display = "flex";
+    let width = 20;
+    let id = setInterval(frame, 30);
+    function frame() {
+      //chạy thanh progress lên 100% thì mới gọi hàm loadData
+      if (width >= 100) {
+        clearInterval(id);
+        loadData();
+        progressBar.style.display = "none";
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerText = width + "%";
+      }
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 /**
  * Hàm call dữ liệu
  * Author: Duy
  */
-
 function loadData() {
   //gọi api lấy dữ liệu
   try {

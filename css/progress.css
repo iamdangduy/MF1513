@@ -1,0 +1,40 @@
+.main__progress {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.main__progress--dialog {
+    width: 400px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 24px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.main__progress--title {
+    margin-bottom: 32px;
+}
+
+.progress {
+    height: 36px;
+    width: 15%;
+    background-color: #016253;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding-left: 24px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+

@@ -1,5 +1,5 @@
 .content {
-  background-color: #99dad0;
+  background-color: #CCECE7;
   padding: 16px 24px 48px 24px;
   box-sizing: border-box;
 }
@@ -11,7 +11,7 @@
 }
 
 .content__main--bookmark {
-  background-color: #99dad0;
+  background-color: #CCECE7;
   width: 100%;
   height: 36px;
   display: flex;

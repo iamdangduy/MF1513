@@ -117,13 +117,19 @@
             </div>
             <div class="content__main--table">
               <div class="main__search">
-                <div class="main__refresh"></div>
+                <div class="main__refresh" onclick="moveProgress()"></div>
                 <div class="main__input">
                   <input
                     class="input input-search"
                     type="text"
                     placeholder="Tìm theo mã, tên nhân viên"
                   />
+                </div>
+              </div>
+              <div class="main__progress">
+                <div class="main__progress--dialog">
+                  <div class="main__progress--title">Khởi tạo dữ liệu, vui lòng đợi..</div>
+                  <div class="progress">20%</div>
                 </div>
               </div>
               <div class="main__table">
@@ -206,6 +212,16 @@
       <div class="add-form">
         <div class="dialog__header">
           <p class="dialog__title">Thông tin nhân viên</p>
+          <div class="confirm__role">
+            <div class="role__employee">
+              <input type="checkbox" name="" id="input-checkbox" />
+              <p class="role__label">Là nhân viên</p>
+            </div>
+            <div class="role__customer">
+              <input type="checkbox" name="" id="input-checkbox" />
+              <p class="role__label">Là khách hàng</p>
+            </div>
+          </div>
           <div class="dialog__icon">
             <div class="dialog__icon--request"></div>
             <div class="dialog__icon--close" onclick="closeDialog()"></div>
