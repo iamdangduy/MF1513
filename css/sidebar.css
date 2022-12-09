@@ -140,3 +140,23 @@
   width: 19px;
   height: 18px;
 }
+
+.sidebar__logo {
+  background-color: #00201b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.toggle {
+  background: url('../assets/img/Sprites.64af8f61.svg') no-repeat -428px -92px;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.toggle:hover {
+  cursor: pointer;
+}
