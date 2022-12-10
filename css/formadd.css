@@ -43,7 +43,7 @@
 
 .dialog__content {
   width: 100%;
-  height: calc(100% - 36px - 8px - 24px - 24px - 24px);
+  height: calc(100% - 36px - 8px - 24px - 24px - 24px - 24px);
   margin-top: 24px;
 }
 
@@ -82,7 +82,7 @@
 }
 
 .row__left {
-  width: 48%;
+  width: 50%;
   /* background-color: #e6f6f3; */
   height: calc(36px + 8px + 19px);
   /* border: 1px solid black; */
@@ -194,4 +194,8 @@ span {
 .role__label {
   font-size: 14px;
   font-weight: 400;
+}
+
+.address-input {
+  width: calc(100% - 8px);
 }

@@ -1,5 +1,5 @@
 moveProgress();
-
+// loadData();
 /**
  * Hàm chuyển động progressbar
  * Author: Duy
@@ -28,6 +28,19 @@ function moveProgress() {
   }
 }
 
+function reloadData() {
+  try {
+    moveProgress();
+    let arrayEmployee = document.querySelectorAll("#tr-employee-data");
+    for (let i = 0; i < arrayEmployee.length; i++) {
+      arrayEmployee[i].remove();
+    }
+    // loadData();
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 /**
  * Hàm call dữ liệu
  * Author: Duy
@@ -42,7 +55,7 @@ function loadData() {
       success: function (res) {
         for (const employee of res) {
           var trHTML = `
-                          <tr>
+                          <tr id="tr-employee-data">
                               <td><input type="checkbox" class="checkbox-input"></td>
                               <td>${employee.EmployeeCode}</td>
                               <td>${employee.EmployeeName}</td>
