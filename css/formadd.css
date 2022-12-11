@@ -12,7 +12,7 @@
 
 .add-form {
   width: 870px;
-  height: 620px;
+  height: 692px;
   background-color: #ffffff;
   position: fixed;
   border-radius: 4px;
@@ -21,7 +21,8 @@
 }
 
 .dialog__row {
-  margin-bottom: 8px;
+  margin-bottom: 23px;
+  box-sizing: border-box;
 }
 
 .dialog__title {
@@ -63,12 +64,12 @@
 }
 
 .dialog__hr {
-  margin: 0 0 24px 0;
+  margin: 0 0 20px 0;
 }
 
 .dialog__footer {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
 }
 
@@ -106,6 +107,7 @@
 
 .input1 {
   flex-basis: 30%;
+  height: 100%;
 }
 
 .input2 {
@@ -117,6 +119,7 @@
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 8px;
+  position: relative;
 }
 
 .radio-input {
@@ -198,4 +201,22 @@ span {
 
 .address-input {
   width: calc(100% - 8px);
+}
+
+.identity {
+  background-color: #00201b;
+  width: fit-content;
+  padding: 4px;
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  display: none;
+}
+
+.id-label:hover .identity {
+  display: block;
 }

@@ -28,14 +28,18 @@ function moveProgress() {
   }
 }
 
+/**
+ * Hàm redload lại data
+ * Author: Duy
+ */
 function reloadData() {
   try {
+    //tái sử dụng lại hàm progress (đã bao gồm hàm loadData)
     moveProgress();
-    let arrayEmployee = document.querySelectorAll("#tr-employee-data");
+    let arrayEmployee = document.querySelectorAll(".tr-employee-data");
     for (let i = 0; i < arrayEmployee.length; i++) {
       arrayEmployee[i].remove();
     }
-    // loadData();
   } catch (error) {
     console.log(error);
   }
@@ -55,7 +59,7 @@ function loadData() {
       success: function (res) {
         for (const employee of res) {
           var trHTML = `
-                          <tr id="tr-employee-data">
+                          <tr class="tr-employee-data">
                               <td><input type="checkbox" class="checkbox-input"></td>
                               <td>${employee.EmployeeCode}</td>
                               <td>${employee.EmployeeName}</td>
@@ -121,49 +125,38 @@ function closeDialog() {
  */
 function validateDialog() {
   try {
-    let msgError = [];
-    // get element
-    let idEmployee = document.querySelector("#input-id").value;
-    let nameEmployee = document.querySelector("#label-name-employee").value;
+    inputErrors = [];
 
-    //kiểm tra dữ liệu người dùng nhập
-    if (idEmployee === "" || idEmployee === undefined || idEmployee === null) {
-      msgError.push("ID không được phép để trống");
+    //get tất cả input bắt buộc
+    let inputRequired = $("[m-required]");
+
+    //xoá hết error label
+    let elementErrors = document.querySelectorAll(".error-notification");
+    for (const item of elementErrors) {
+      item.remove();
     }
-    if (
-      nameEmployee === "" ||
-      nameEmployee === undefined ||
-      nameEmployee === null
-    ) {
-      msgError.push("Name không được phép để trống");
-    }
-    console.log(msgError);
-    // let notification = document.querySelector(".popup__main--content");
-    //in dữ liệu ra popup
-    if (msgError.length !== 0) {
-      document.querySelector(".popup").style.display = "flex";
-      for (const noti of msgError) {
-        let liNoti = `<li class="popup-noti">${noti}</li>`;
-        $(".popup__main--content").append(liNoti);
+    for (const input of inputRequired) {
+      if (
+        input.value.trim() === "" ||
+        input.value === null ||
+        input.value === undefined
+      ) {
+        inputErrors.push(input);
+      } else {
+        $(input).removeClass("input--error");
       }
     }
-    msgError = [];
-  } catch (error) {
-    console.log(error);
-  }
-}
 
-/**
- * Hàm đóng Popup
- * Author: Duy
- */
-function closePopup() {
-  try {
-    //ẩn popup
-    document.querySelector(".popup").style.display = "none";
-
-    //xoá hết noti trong popup
-    $(".popup-noti").remove();
+    if (inputErrors.length > 0) {
+      //focus vào ô lỗi đầu tiên
+      inputErrors[0].focus();
+      for (const array of inputErrors) {
+        array.classList.add("input--error");
+        $(array).after(
+          `<div class="error-notification">Mã không để trống</div>`
+        );
+      }
+    }
   } catch (error) {
     console.log(error);
   }

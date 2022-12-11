@@ -8,6 +8,7 @@
 @import url(../css/input.css);
 @import url(../css/popup.css);
 @import url(../css/progress.css);
+@import url(../css/error.css);
 
 body {
   margin: 0;

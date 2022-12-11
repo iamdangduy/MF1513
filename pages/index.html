@@ -128,7 +128,9 @@
               </div>
               <div class="main__progress">
                 <div class="main__progress--dialog">
-                  <div class="main__progress--title">Khởi tạo dữ liệu, vui lòng đợi..</div>
+                  <div class="main__progress--title">
+                    Khởi tạo dữ liệu, vui lòng đợi..
+                  </div>
                   <div class="progress">20%</div>
                 </div>
               </div>
@@ -150,7 +152,7 @@
                     <th>CHI NHÁNH TK NGÂN HÀNG</th>
                     <th>CHỨC NĂNG</th>
                   </tr>
-                  <div class="tr-user" style="background-color: aqua; display: none;">
+                  <div class="tr-user">
                     <tr>
                       <td class="td-input">
                         <input type="checkbox" class="checkbox-input" />
@@ -211,7 +213,7 @@
     <div class="dialog">
       <div class="add-form">
         <div class="dialog__header">
-          <p class="dialog__title">Thông tin nhân viên</p>
+          <p class="dialog__title">Thêm mới nhân viên</p>
           <div class="confirm__role">
             <div class="role__employee">
               <input type="checkbox" name="" id="input-checkbox" />
@@ -234,41 +236,52 @@
                 <div class="row__input input1">
                   <div class="row__input--label">Mã <span>*</span></div>
                   <div class="row__input--input">
-                    <input id="input-id" type="text" placeholder="NV-1644" tabindex="1"/>
+                    <input
+                      class="input-id"
+                      type="text"
+                      placeholder="NV-1644"
+                      m-required
+                      tabindex="1"
+                    />
                   </div>
+                  <!-- <div class="error-notification">Mã không để trống</div> -->
                 </div>
                 <div class="row__input input2">
                   <div class="row__input--label">Tên <span>*</span></div>
                   <div class="row__input--input">
                     <input
                       type="text"
-                      id="label-name-employee"
+                      class="label-name-employee"
+                      m-required
                       tabindex="2"
                     />
                   </div>
+                  <!-- <div class="error-notification">
+                    Họ tên không được để trống
+                  </div> -->
                 </div>
               </div>
               <div class="row__right">
                 <div class="row__input input1">
                   <div class="row__input--label">Ngày sinh</div>
                   <div class="row__input--input">
-                    <input type="date" placeholder="NV-1644" tabindex="5"/>
+                    <input type="date" placeholder="NV-1644" tabindex="5" />
                   </div>
                 </div>
                 <div class="row__input input2">
                   <div class="row__input--label">Giới tính</div>
-                  <div class="row__input--radio" >
+                  <div class="row__input--radio">
                     <div class="input__radio--row">
-                      <input type="radio" class="radio-input" tabindex="6"/>
-                      <div class="radio__label" >Nam</div>
+                      <input type="radio" class="radio-input" tabindex="6" />
+                      <div class="radio__label">Nam</div>
                     </div>
                     <div class="input__radio--row">
-                      <input type="radio" class="radio-input" tabindex="7"/>
-                      <div class="radio__label" >Nữ</div>
+                      <input type="radio" class="radio-input" tabindex="7" />
+                      <div class="radio__label">Nữ</div>
                     </div>
                     <div class="input__radio--row">
-                      <input type="radio" class="radio-input" tabindex="8"/>
-                      <div class="radio__label" >Khác</div>
+                      <input type="radio" class="radio-input" tabindex="8" />
+                      <div class="radio__label">Khác</div>
                     </div>
                   </div>
                 </div>
@@ -302,15 +315,22 @@
               </div>
               <div class="row__right">
                 <div class="row__input input-id">
-                  <div class="row__input--label">Số CMND</div>
+                  <div class="row__input--label id-label">
+                    Số CMND
+                    <div class="identity">Số Chứng Minh Nhân Dân</div>
+                  </div>
                   <div class="row__input--input">
-                    <input type="text" tabindex="9"/>
+                    <input type="text" tabindex="9" />
                   </div>
                 </div>
                 <div class="row__input input-date">
                   <div class="row__input--label">Ngày cấp</div>
                   <div class="row__input--input">
-                    <input type="date" placeholder="Nguyễn Thị Ánh Bằng" tabindex="10"/>
+                    <input
+                      type="date"
+                      placeholder="Nguyễn Thị Ánh Bằng"
+                      tabindex="10"
+                    />
                   </div>
                 </div>
               </div>
@@ -322,7 +342,7 @@
                 <div class="row__input">
                   <div class="row__input--label">Nơi cấp</div>
                   <div class="row__input--input">
-                    <input type="text"  tabindex="4"/>
+                    <input type="text" tabindex="4" />
                   </div>
                 </div>
               </div>
@@ -330,7 +350,7 @@
                 <div class="row__input">
                   <div class="row__input--label">Chức danh</div>
                   <div class="row__input--input">
-                    <input type="text" tabindex="11"/>
+                    <input type="text" tabindex="11" />
                   </div>
                 </div>
               </div>
@@ -339,7 +359,7 @@
           <div class="dialog__row">
             <div class="row__input--label">Địa chỉ</div>
             <div class="row__input--input">
-              <input class="address-input" type="text" tabindex="12"/>
+              <input class="address-input" type="text" tabindex="12" />
             </div>
           </div>
           <div class="dialog__row">
@@ -347,19 +367,27 @@
               <div class="dialog__row--col">
                 <div class="row__input--label">ĐT di động</div>
                 <div class="row__input--input">
-                  <input type="text" placeholder="0333133942" tabindex="13"/>
+                  <input type="text" placeholder="0333133942" tabindex="13" />
                 </div>
               </div>
               <div class="dialog__row--col">
                 <div class="row__input--label">ĐT cố định</div>
                 <div class="row__input--input">
-                  <input type="text" placeholder="(764) 749-6478" tabindex="14"/>
+                  <input
+                    type="text"
+                    placeholder="(764) 749-6478"
+                    tabindex="14"
+                  />
                 </div>
               </div>
               <div class="dialog__row--col">
                 <div class="row__input--label">Email</div>
                 <div class="row__input--input">
-                  <input type="text" placeholder="nguyendangduy@gmail.com" tabindex="15"/>
+                  <input
+                    type="text"
+                    placeholder="nguyendangduy@gmail.com"
+                    tabindex="15"
+                  />
                 </div>
               </div>
             </div>
@@ -369,19 +397,19 @@
               <div class="dialog__row--col">
                 <div class="row__input--label">Tài khoản ngân hàng</div>
                 <div class="row__input--input">
-                  <input type="text"  tabindex="16"/>
+                  <input type="text" tabindex="16" />
                 </div>
               </div>
               <div class="dialog__row--col">
                 <div class="row__input--label">Tên ngân hàng</div>
                 <div class="row__input--input">
-                  <input type="text"  tabindex="17"/>
+                  <input type="text" tabindex="17" />
                 </div>
               </div>
               <div class="dialog__row--col">
                 <div class="row__input--label">Chi nhánh</div>
                 <div class="row__input--input">
-                  <input type="text"  tabindex="18"/>
+                  <input type="text" tabindex="18" />
                 </div>
               </div>
             </div>
@@ -390,17 +418,25 @@
         <hr class="dialog__hr" />
         <div class="dialog__footer">
           <div class="dialog__footer-left">
-            <button class="btn-cancel" onclick="closeDialog()" tabindex="21">Huỷ</button>
+            <button class="btn-cancel" onclick="closeDialog()" tabindex="21">
+              Huỷ
+            </button>
           </div>
           <div class="dialog__footer-right">
-            <button class="btn-hide" onclick="closeDialog()" tabindex="20">Cất</button>
-            <button class="btn-hide-and-add" onclick="validateDialog()" tabindex="19">
+            <button class="btn-hide" onclick="closeDialog()" tabindex="20">
+              Cất
+            </button>
+            <button
+              class="btn-hide-and-add"
+              onclick="validateDialog()"
+              tabindex="19"
+            >
               Cất và Thêm
             </button>
           </div>
         </div>
       </div>
-      <div class="popup">
+      <!-- <div class="popup">
         <div class="popup__main">
           <div class="popup__main--title">
             <h1 style="font-size: 24px; font-weight: 700">Thông báo</h1>
@@ -411,7 +447,7 @@
             <button onclick="closePopup()">Đồng ý</button>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <script src="../js/js.js"></script>

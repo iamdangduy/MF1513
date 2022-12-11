@@ -1,0 +1,21 @@
+.input--error {
+    border-color: red;
+    margin: 0;
+}
+
+.input--error:focus {
+    border: 1px solid red;
+
+}
+
+.error-notification {
+    /* background-color: black; */
+    /* padding: ; */
+    width: max-content;
+    color: red;
+    border-color: red;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 2px;
+    /* display: none; */
+}
