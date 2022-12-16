@@ -1,5 +1,8 @@
 moveProgress();
+addUser();
 // loadData();
+// deleteUser();
+// getInfor();
 /**
  * Hàm chuyển động progressbar
  * Author: Duy
@@ -60,8 +63,10 @@ function loadData() {
         for (const employee of res) {
           var trHTML = `
                           <tr class="tr-employee-data">
-                              <td><input type="checkbox" class="checkbox-input"></td>
-                              <td>${employee.EmployeeCode}</td>
+                              <td><input type="checkbox" class="checkbox-input" onclick="getInfor()"></td>
+                              <td class="id-employee" EmployeeId="${
+                                employee.EmployeeId
+                              }">${employee.EmployeeCode}</td>
                               <td>${employee.EmployeeName}</td>
                               <td>${employee.Gender || ""}</td>
                               <td class="dob">${employee.CreatedDate.slice(
@@ -74,11 +79,16 @@ function loadData() {
                               <td></td>
                               <td></td>
                               <td></td>
-                              <td></td>
+                              <td>
+                                <div class="btn-delete" onclick="deleteUser()">Xoá</div>
+                              </td>
                           </tr>
                         `;
           $(".trEmployee").append(trHTML);
         }
+      },
+      error: function (error) {
+        console.log(error);
       },
     });
   } catch (error) {
@@ -108,12 +118,22 @@ function displayDialog() {
  * Hàm đóng dialog
  * Author: Duy
  */
-function closeDialog() {
+function closeDialog(isDisplay) {
   try {
     //Ẩn dialog
-    let isDisplay = document.querySelector(".dialog");
-    console.log(isDisplay);
-    isDisplay.style.display = "none";
+    document.querySelector(`.${isDisplay}`).style.display = "none";
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+/**
+ * Hàm show popup hiển thị thông báo
+ * Author: Duy
+ */
+function showPopup() {
+  try {
+    document.querySelector(".popup").style.display = "flex";
   } catch (error) {
     console.log(error);
   }
@@ -157,6 +177,99 @@ function validateDialog() {
         );
       }
     }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+/**
+ * Hàm thêm mới người dùng
+ * Author: Duy
+ */
+function addUser() {
+  try {
+    let employee = {};
+    let required = $("[bus]");
+    for (const item of required) {
+      const bus = $(item).attr("bus");
+      const value = $(item).val();
+      // console.log(typeof $(item).val());
+
+      //Gán giá trị cho property tương ứng của đối tượng
+      employee[bus] = value;
+
+      // console.log(employee);
+    }
+    $.ajax({
+      type: "POST",
+      url: "https://amis.manhnv.net/api/v1/Employees",
+      data: JSON.stringify(employee),
+      dataType: "json",
+      contentType: "application/json",
+      success: function () {
+        closeDialog("dialog");
+        loadData();
+      },
+      error: function (error) {
+        console.log(error);
+      },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+/**
+ * Hàm lấy thông tin user khi click vào checkbox
+ * Author: Duy
+ */
+function getInfor() {
+  try {
+    let valueCheck = document.querySelectorAll(".checkbox-input");
+    arrayInputCheck = [];
+    for (const item of valueCheck) {
+      //kiểm tra nếu checked thì lưu vào mảng
+      if (item.checked == true) {
+        console.log(item);
+        arrayInputCheck.push(item.parentElement.nextElementSibling.textContent);
+      }
+    }
+
+    // console.log(arrayInputCheck);
+    // let employeeID = document.querySelector('.')
+    // console.log(employeeID);
+    // console.log(employeeID);
+    // if (valueCheck.checked == true) {
+    //   // console.log(employeeID.text());
+    //   console.log(valueCheck);
+
+    // }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+/**
+ * Hàm delete nhân viên qua id
+ * Author: Duy
+ */
+function deleteUser() {
+  try {
+    let idEmployeeList = document.querySelectorAll(".id-employee");
+    let id = "";
+    for (let i = 0; i < idEmployeeList.length; i++) {
+      id = $(idEmployeeList[i]).attr("EmployeeId");
+    }
+    $.ajax({
+      type: "DELETE",
+      url: `https://amis.manhnv.net/api/v1/Employees/${id}`,
+      success: function () {
+        loadData();
+      },
+      error: function (error) {
+        console.log(error);
+      },
+    });
   } catch (error) {
     console.log(error);
   }

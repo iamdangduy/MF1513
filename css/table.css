@@ -36,11 +36,13 @@ th {
   width: 24px;
   height: 24px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .td-input {
   width: 24px;
   height: 24px;
+  /* cursor: pointer; */
 }
 
 .tr-employee-data {
@@ -48,6 +50,12 @@ th {
 }
 
 .tr-employee-data:hover {
-  background-color: #67C8B9;
+  background-color: #99DAD0;
+  /* cursor: pointer; */
+}
+
+.btn-delete {
+  text-align: center;
+  color: #004137;
   cursor: pointer;
 }
